@@ -1,0 +1,25 @@
+{
+  "name": "question-gambit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "sample:browsecomp-plus:slices": "python3 scripts/generate_browsecomp_plus_query_slices.py",
+    "run:benchmark": "npx tsx src/orchestration/query_set_sharded_shared_bm25.ts",
+    "evaluate:run": "npx tsx src/wrappers/evaluate_run_with_pi_entry.ts",
+    "evaluate:retrieval": "npx tsx src/wrappers/evaluate_retrieval_entry.ts",
+    "judge:codex": "npx tsx scripts/judge_arm_concurrent.ts",
+    "recall:gold": "npx tsx scripts/recall_against_qrels.ts"
+  },
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "^0.74.0",
+    "@earendil-works/pi-tui": "^0.74.0",
+    "chalk": "^5.6.2",
+    "tsx": "^4.20.6",
+    "typebox": "^1.1.24"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "typescript": "^5.9.2"
+  }
+}

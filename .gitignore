@@ -1,0 +1,37 @@
+node_modules/
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Benchmark data (large; download separately)
+data/*
+!data/.gitkeep
+indexes/*
+!indexes/.gitkeep
+vendor/*
+!vendor/.gitkeep
+
+# Experiment outputs
+runs/*
+!runs/.gitkeep
+evals/*
+!evals/.gitkeep
+snapshots/*
+!snapshots/.gitkeep
+
+# Caches
+.cache/
+scripts/__pycache__/
+__pycache__/
+**/.pi-agent-isolated/
+**/_control/
+
+# Editor / OS
+.vscode/
+.idea/
+
+# Local agent / editor session state (never commit)
+CLAUDE.local.md
+.claude/
+.pi-agent-run/
